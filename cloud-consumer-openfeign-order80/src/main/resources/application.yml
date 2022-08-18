@@ -1,0 +1,21 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: openfeign-order
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 190.160.9.100:8848
+
+logging:
+  level:
+    com.alibaba.cloud: debug
+
+feign:
+  client:
+    config:
+      default:
+        connect-timeout: 1000
+        read-timeout: 2000
